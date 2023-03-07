@@ -4,6 +4,7 @@
   "description": "## Ao clonar o projeto,escreva o comndo npm i ### clientes ### arquivos ### serviços",
   "main": "index.js",
   "dependencies": {
+    "@prisma/client": "^4.11.0",
     "asynckit": "^0.4.0",
     "axios": "^1.3.4",
     "bcrypt": "^5.1.0",
@@ -16,8 +17,9 @@
     "knex": "^2.4.2",
     "mime-db": "^1.52.0",
     "mime-types": "^2.1.35",
-    "mysql2": "^3.2.0",
     "nodemon": "^2.0.21",
+    "pg": "^8.10.0",
+    "prisma": "^4.11.0",
     "proxy-from-env": "^1.1.0",
     "sabe": "^1.0.0"
   },

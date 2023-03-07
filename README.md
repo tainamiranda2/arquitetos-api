@@ -4,11 +4,22 @@
 
 ### como framworks para api - express
 ### body-parser
-### knex
+
+### prisma - para se conectar ao banco
+## comando npm i prisma e npx prisma init
+
 ### nodemon
+### docker -para criar um docker
+## comando - sudo docker-compose up -d
+
 ### bcrypt
-### mysql2
 
 ### clientes
-### arquivos
+## medto post - para se cadastrar
+### arquitetos
+
+## metodo post - para se cadastrar
+
 ### serviços
+
+## metodo post - para se cadastrar
