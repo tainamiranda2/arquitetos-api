@@ -1,5 +1,7 @@
 const express = require("express")
 const app = express()
+const cors=require("cors")
+app.use(cors())
 //var router = require("./routes/routes")
 const arquitetoRoutes=require("./routes/arquitetoRoutes")
 const clienteRoutes=require("./routes/clienteRoutes")
