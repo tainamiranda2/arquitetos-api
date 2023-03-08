@@ -2,24 +2,24 @@
 
 ## Ao clonar o projeto,escreva o comando npm i
 
-### como framworks para api - express
+### como frameworks para api - express
 ### body-parser
 
 ### prisma - para se conectar ao banco
 ## comando npm i prisma e npx prisma init
 
 ### nodemon
-### docker -para criar um docker
+### docker - para criar um docker uma imagem do postgree 
 ## comando - sudo docker-compose up -d
 
 ### bcrypt
 
-### clientes
-## medto post - para se cadastrar
-### arquitetos
+## endepoints
+### GET/cliente - responsável por listar todos os clientes cadastrados
+### POST/cliente- responsável por cadastrar clientes
 
-## metodo post - para se cadastrar
+### GET/arquiteto - responsável por listar todos os arquitetos cadastrados
+### POST/arquiteto- responsável por cadastrar arquitetos
 
-### serviços
-
-## metodo post - para se cadastrar
+### GET/servicos - responsável por listar todos os servicos cadastrados
+### POST/servicos- responsável por cadastrar serviços cadastrados por clientes e encaminhando para um arquiteto 
