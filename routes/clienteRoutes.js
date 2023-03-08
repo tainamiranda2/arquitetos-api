@@ -14,7 +14,7 @@ clienteRoutes.get("/cliente",async(req, res)=>{
 })
 
 clienteRoutes.post("/cliente" ,async(req, res)=>{
-      var {nome ,email ,  telefone ,  genero ,  idade ,  senha,papel}=(req.body)
+      var {nome ,email ,  telefone ,  genero ,  idade ,  senha,papel}=req.body
 
        if(nome == undefined || nome ===''){
            return res.status(400).json("nome vazio")

@@ -12,15 +12,20 @@ servicoRoutes.get("/servico",async(req, res)=>{
     return res.status(200).json(servico)
   })
 
-  servicoRoutes.post("servico", async(req, res)=>{
-    var {nome,	descricao,estado	,prazoI,	prazoF,	arquiteto_id,	cliente_id	}=(req.body)
+  servicoRoutes.post("/servico", async(req, res)=>{
+    var {nome,descricao,estado	,
+            prazoI,
+            prazoF,
+            arquiteto_id,
+            	cliente_id}=req.body
+                
 
     if(nome == undefined || nome ===''){
       return  res.status(400).json("nome vazio")
                 }
                 
           if(descricao == undefined || descricao ===''){
-          return       res.status(400).json("descrição vazio")
+          return    res.status(400).json("descrição vazio")
                 }
 
     if(estado == undefined || estado ===''){
@@ -43,8 +48,8 @@ servicoRoutes.get("/servico",async(req, res)=>{
        return res.status(400).json("cliente vazio")
   }
 
-const servico= await prisma.create({
-   date:{
+const servico= await prisma.servico.create({
+   data:{
     nome,	descricao,estado	,prazoI,	prazoF,	arquiteto_id,	cliente_id	
    } ,
 })
