@@ -11,6 +11,23 @@ servicoRoutes.get("/servico",async(req, res)=>{
       
     return res.status(200).json(servico)
   })
+  servicoRoutes.get("/servico/:id",async(req, res)=>{
+    
+    var {id}=req.params
+
+    let idInt=parseInt(id)
+    
+    const servico=await prisma.servico.findUnique(
+      {where:{id:idInt},
+    })
+    
+    if(!servico){
+      return res.status(404).json('servico informado  não existe')
+    }
+    
+   
+    return res.status(200).json(servico)
+  })
 
   servicoRoutes.post("/servico", async(req, res)=>{
     var {nome,descricao,estado	,
@@ -59,11 +76,13 @@ const servico= await prisma.servico.create({
  
 
   })
-  servicoRoutes.put('/servico' ,async(req, res)=>{
+  servicoRoutes.put('/servico/:id' ,async(req, res)=>{
+
     var {id,nome,descricao,estado	,  prazoI,  prazoF, arquiteto_id, 	cliente_id}=req.body
          
              //ver se id existe
 const servicoVerExiste= prisma.servico.findUnique({where:{id}})
+
 if(!servicoVerExiste){
   return res.status(400).json('servico  não existe')
 }
@@ -79,6 +98,7 @@ data:{
 })
 
 servicoRoutes.delete("/servico/:id",async(req,res)=>{
+
 var {id}=req.params
 
 let idInt=parseInt(id)
