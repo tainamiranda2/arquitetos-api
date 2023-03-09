@@ -56,7 +56,46 @@ const servico= await prisma.servico.create({
 
  return res.status(200).json(servico)
 
+ 
 
   })
+  servicoRoutes.put('/servico' ,async(req, res)=>{
+    var {id,nome,descricao,estado	,  prazoI,  prazoF, arquiteto_id, 	cliente_id}=req.body
+         
+             //ver se id existe
+const servicoVerExiste= prisma.servico.findUnique({where:{id}})
+if(!servicoVerExiste){
+  return res.status(400).json('servico  não existe')
+}
+const servico= await prisma.servico.update({where:{
+ id,
+},
+data:{
+  nome,	descricao,estado,prazoI,prazoF,	arquiteto_id,	cliente_id	
+}
+  })
+  return res.status(200).json(servico)
 
+})
+
+servicoRoutes.delete("/servico/:id",async(req,res)=>{
+var {id}=req.params
+
+let idInt=parseInt(id)
+
+const servicoVerExiste=await prisma.servico.findUnique(
+  {where:{id:idInt},
+})
+
+if(!servicoVerExiste){
+  return res.status(404).json('servico  não existe')
+}
+
+const servico= await prisma.servico.delete({
+  where:{id: idInt},
+} )
+
+return res.status(200).json(servico)
+
+})
   module.exports=servicoRoutes;

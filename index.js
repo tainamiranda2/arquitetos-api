@@ -6,6 +6,7 @@ app.use(cors())
 const arquitetoRoutes=require("./routes/arquitetoRoutes")
 const clienteRoutes=require("./routes/clienteRoutes")
 const servicoRoutes=require("./routes/servicoRoutes")
+const authRoutes=require("./routes/authRoutes")
 
 //const Routes=require("./routes/ArquitetoRoutes")
 
@@ -17,7 +18,7 @@ app.use(bodyParser.json())
 app.use(arquitetoRoutes)
 app.use(clienteRoutes)
 app.use(servicoRoutes)
-
+app.use(authRoutes)
 //app.use("/",router);
 //conexão com o banco de dados
 

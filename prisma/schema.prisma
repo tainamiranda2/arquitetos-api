@@ -14,11 +14,14 @@ model arquiteto{
  id Int @id @default(autoincrement())
  nome String
 email  String
-telefone Int
+telefone  String
 genero  String
-idade Int
-senha Int
+idade  String
+senha  String
 papel  String
+experiencia String @default("")
+habilidades String @default("")
+conhecimento String @default("")
 }
 model servico{
    id Int @id @default(autoincrement())
@@ -27,16 +30,16 @@ model servico{
    estado	 String
    prazoI  String
    	prazoF  String
-    arquiteto_id Int
-    cliente_id Int
+    arquiteto_id  String
+    cliente_id  String
 }
 model cliente{
    id Int @id @default(autoincrement())
    nome String
 email  String
-telefone Int
+telefone  String
 genero  String
-idade Int
-senha Int
+idade  String
+senha  String
 papel  String
 }
