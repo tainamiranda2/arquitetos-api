@@ -1,4 +1,4 @@
-## Api para o sistema de serviços para arquitos <a href="">serviço de arquitetura</a>
+## Api para o sistema de serviços para arquitos <a href="https://github.com/tainamiranda2/arquitetoSystem">serviço de arquitetura</a>
 
 ## Ao clonar o projeto, escreva o comando npm i para baixar todas as dependencias
 
@@ -32,3 +32,6 @@
 
 ### GET/servicos - responsável por listar todos os servicos cadastrados
 ### POST/servicos- responsável por cadastrar serviços cadastrados por clientes e encaminhando para um arquiteto 
+### DELETE/servicos - responsável por deletar os servicos cadastrados
+### GET/servicos/id - responsável por listar apenas um dos servicos cadastrados
+### PUT/servicos - responsável por atualizar os servicos cadastrados
